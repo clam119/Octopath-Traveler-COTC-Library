@@ -1,0 +1,33 @@
+<h2 class="page-header">Search Character</h2>
+<form action="/characters" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Character Name</label>
+      <input type="text" name="characterName" value="<%= searchOptions.characterName %>">
+    </div>
+  </div>
+  <div class="form-row">
+
+    <div class="form-item">
+      <label>Jobclass</label>
+      <input type="text" name="jobclass" value="<%= searchOptions.jobclass %>">
+    </div>
+
+    <div class="form-item">
+      <label>Affiliation</label>
+      <input type="text" name="affiliation" value="<%= searchOptions.affiliation %>">
+    </div>
+
+    <div class="form-item">
+      <label>rarity</label>
+      <input type="text" name="rarity" value="<%= searchOptions.rarity %>">
+    </div>
+
+  </div>
+
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
+<%- include('../partials/characterGrid', { characters: character, large: true }) %>

@@ -1,0 +1,10 @@
+<h2 class="page-header"><%= rarity.name %></h2>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/rarities/<%= rarity.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm',
+              { url: `/rarities/${rarity.id}` }) %>
+</div>
+<% if (rarities.length > 0) { %>
+  <h2 class="page-header">Characters By Rarity</h2>
+  <%- include('../partials/characterGrid', { characters: characters }) %>
+<% } %>

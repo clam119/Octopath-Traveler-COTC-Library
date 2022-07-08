@@ -1,0 +1,23 @@
+<h2 class="page-header"><%= book.title %></h2>
+<div class="character-details">
+  <div>
+    <img class="character-cover" src="<%= character.characterImagePath %>">
+    <div class="character-details-btn-grid">
+      <a class="btn btn-primary" href="/characters/<%= character.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/characters/${character.id}` }) %>
+      <a class="btn btn-primary character-details-author-button" href="/characters/<%= character.id %>">View Character</a>
+    </div>
+  </div>
+  <div class="character-details-grid">
+    <div class="character-details-label">Character Name:</div>
+    <div><%= character.characterName %></div>
+    <div class="character-details-label">Job Class:</div>
+    <div><%= character.jobclass %></div>
+    <div class="character-details-label">Affiliation:</div>
+    <div><%= character.affiliation %></div>
+    <div class="character-details-label">Rarity:</div>
+    <div><%= character.rarity %></div>
+    <div class="character-details-label">Skills:</div>
+    <div><%= character.skills %></div>
+  </div>
+</div>

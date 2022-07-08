@@ -1,0 +1,8 @@
+<h2 class="page-header">Edit Rarity</h2>
+<form action="/rarities/<%= rarity.id %>?_method=PUT" method="POST">
+  <%- include('_form_fields') %>
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/rarities/<%= rarity.id %>">Cancel</a>
+    <button class="btn btn-primary" type="submit">Update</button>
+  </div>
+</form>

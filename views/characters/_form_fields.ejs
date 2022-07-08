@@ -1,0 +1,60 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Character Name</label>
+    <input type="text" name="characterName" value="<%= character.characterName %>">
+  </div>
+
+  <div class="form-item">
+    <label>Jobclass</label>
+    <select name="jobclass">
+      <% authors.forEach(jobclass => { %>
+        <% if (jobclass.id === jobclass.name) { %>
+          <option selected label="<%= jobclass.name %>" value="<%= jobclass.id %>">
+        <% } else { %>
+          <option label="<%= jobclass.name %>" value="<%= jobclass.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>
+
+<div class="form-row">
+  
+  <div class="form-item">
+    <label>Affiliation</label>
+    <select name="affiliation">
+      <% authors.forEach(affliation => { %>
+        <% if (affiliation.id === affiliation.name) { %>
+          <option selected label="<%= affiliation.name %>" value="<%= affiliation.id %>">
+        <% } else { %>
+          <option label="<%= affiliation.name %>" value="<%= affliation.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+
+  <div class="form-item">
+    <label>Rarity</label>
+    <select name="rarity">
+      <% authors.forEach(rarity => { %>
+        <% if (rarity.id === rarity.name) { %>
+          <option selected label="<%= rarity.name %>" value="<%= rarity.id %>">
+        <% } else { %>
+          <option label="<%= rarity.name %>" value="<%= rarity.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>Cover</label>
+    <input type="file" name="cover" class="book-cover filepond">
+  </div>
+  <div class="form-item">
+    <label>Skills</label>
+    <textarea name="description"><%= character.skills %></textarea>
+  </div>
+</div>
